@@ -1,4 +1,4 @@
-package simple_factory;
+package factory_simple;
 
 public class LatteCoffe extends Coffee {
     @Override
