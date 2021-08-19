@@ -1,13 +1,9 @@
 package simple_factory;
 
 public class CoffeeFactory {
-    private Coffee coffee;
 
-    public void setCoffee(Coffee coffee) {
-        this.coffee = coffee;
-    }
-
-    public Coffee createCoffee(String type) {
+    public static Coffee createCoffee(String type) {
+        Coffee coffee;
         if ("LatteCoffee".equalsIgnoreCase(type)) {
             coffee = new LatteCoffe();
         } else if ("americanCoffee".equalsIgnoreCase(type)) {
