@@ -1,7 +1,5 @@
 package lanhanshi.demo2;
 
-import java.util.SimpleTimeZone;
-
 /**
  * @Description: 双重检查锁模式
  * @Author: Awei
@@ -25,6 +23,5 @@ public class Singleton {
         }
         return instance;
     }
-
 }
 

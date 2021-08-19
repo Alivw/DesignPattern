@@ -1,6 +1,5 @@
 package lanhanshi.demo3;
 
-import java.io.ObjectInputStream;
 import java.io.Serializable;
 
 /**
@@ -28,7 +27,6 @@ public class Singleton implements Serializable {
     public static Singleton getInstance() {
         return SingletonHolder.INSTANCE;
     }
-
     /**
      * 当 反序列化的时候，会自动调用该方法，将该方法的返回值直接返回
      * 反序列化破坏单例解决办法

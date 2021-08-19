@@ -9,7 +9,6 @@ package lanhanshi.demo1;
 public class Singleton {
 
     private Singleton () {
-
     }
 
     private static Singleton instance;
