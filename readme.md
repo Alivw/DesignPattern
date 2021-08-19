@@ -96,3 +96,11 @@ demo3 中采用了静态内部类的方式实现单例模式。由于JVM的特�
 ## package factory_abstract
 
 ![image-20210819170719554](https://github.com/devAwei/DesignPattern/blob/master/img/image-20210819170719554.png)
+
+抽象工厂的优点：
+
+-  当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。
+
+缺点：
+
+-  当产品族中需要增加一个新的产品是，所有的工厂类都需要修改
