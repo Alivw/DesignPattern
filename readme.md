@@ -124,3 +124,18 @@ JAVA  中 Object 类中提供了 Clone() 方法来实现浅克隆。
 根据结果显示，执行 Clone() 方法创建对象的时候，构造方法没有执行，也就是说底层并不会采用 new 对象的形式进行创建对象；而且 Clone() 出来的对象跟原型对象不是同一个对象。
 
 ![image-20210820094822013](https://github.com/devAwei/DesignPattern/blob/master/img/image-20210820094822013.png)
+
+## 使用场景
+
+-  对象的创建非常复杂，可以使用原型模式快捷的创建对象。
+-  性能和安全要求比较高。
+
+![image-20210820164016722](https://github.com/devAwei/DesignPattern/blob/master/img/image-20210820164016722.png)
+
+运行结果为：
+
+![image-20210820163744974](https://github.com/devAwei/DesignPattern/blob/master/img/image-20210820163744974.png)
+
+`` 说明 `` 
+
+​    Stu 对象和 stu1 = c2.getStu() 是同一个对象,就会产生将 stu1对象中 name 属性改为 "lisi" ,将两个 Citation 对象中显示的都是 lisi 。这就是浅克隆的效果，对具体原型类（Citation）中的引用类型的属性进行引用的复制。这种情况需要使用深克隆，而进行深克隆需要使用对象流。代码如下：
