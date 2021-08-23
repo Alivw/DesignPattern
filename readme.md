@@ -139,3 +139,21 @@ JAVA  中 Object 类中提供了 Clone() 方法来实现浅克隆。
 `` 说明 `` 
 
 ​    Stu 对象和 stu1 = c2.getStu() 是同一个对象,就会产生将 stu1对象中 name 属性改为 "lisi" ,将两个 Citation 对象中显示的都是 lisi 。这就是浅克隆的效果，对具体原型类（Citation）中的引用类型的属性进行引用的复制。这种情况需要使用深克隆，而进行深克隆需要使用对象流。代码如下：
+
+```java
+public static void main(String[] args) throws Exception{
+    Citation c1 = new Citation();
+    Student stu = new Student();
+    stu.setName("zhangsan");
+    c1.setStu(stu);
+
+    ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Md-003-prototype/src/citation/citation.txt"));
+    out.writeObject(c1);
+
+    ObjectInputStream in = new ObjectInputStream(new FileInputStream("Md-003-prototype/src/citation/citation.txt"));
+    Citation c2 = ((Citation) in.readObject());
+    c2.getStu().setName("lisi");
+    c1.show();
+    c2.show();
+}
+```
