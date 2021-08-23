@@ -1,11 +1,13 @@
 package citation;
 
+import java.io.Serializable;
+
 /**
  * @Description: 奖状类
  * @Author: Awei
  * @Create: 2021-08-20 16:09
  **/
-public class Citation implements Cloneable {
+public class Citation implements Cloneable , Serializable {
 
     private String name;
 
