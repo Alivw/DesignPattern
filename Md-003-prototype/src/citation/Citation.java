@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @Description: 奖状类
- * @Author: Awei
+ * @Author: shizuwei
  * @Create: 2021-08-20 16:09
  **/
 public class Citation implements Cloneable , Serializable {
