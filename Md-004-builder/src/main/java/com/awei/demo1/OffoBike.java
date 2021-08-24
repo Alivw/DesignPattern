@@ -1,9 +1,9 @@
 package com.awei.demo1;
 
 /**
- * @Description: Offo自行车
+ * @Description:
  * @Author: shizuwei
- * @Create: 2021-08-23 16:21
+ * @Create: 2021-08-24 09:01
  **/
 public class OffoBike extends Builder {
     @Override
@@ -13,12 +13,11 @@ public class OffoBike extends Builder {
 
     @Override
     public void buildSeat() {
-        bike.setSeat("橡胶座椅");
+        bike.setSeat("硬邦邦座椅");
     }
 
     @Override
     public Bike createBike() {
         return bike;
     }
-
 }
