@@ -5,7 +5,7 @@ package com.awei.demo1;
  * @Author: shizuwei
  * @Create: 2021-08-24 09:01
  **/
-public class MobileBike extends Builder {
+public class MobileBike extends AbstractBuilder {
     @Override
     public void buildFrame() {
         bike.setFrame("碳纤维车架");
@@ -15,7 +15,6 @@ public class MobileBike extends Builder {
     public void buildSeat() {
         bike.setSeat("真皮座椅");
     }
-
 
     @Override
     public Bike createBike(){

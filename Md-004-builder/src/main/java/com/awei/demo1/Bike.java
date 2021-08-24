@@ -14,7 +14,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Bike {
+    /**
+     * 车架
+     */
     private String frame;
+    /**
+     * 座椅
+     */
     private String seat;
 }
 

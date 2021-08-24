@@ -5,7 +5,7 @@ package com.awei.demo1;
  * @Author: shizuwei
  * @Create: 2021-08-24 09:01
  **/
-public class OffoBike extends Builder {
+public class OffoBike extends AbstractBuilder {
     @Override
     public void buildFrame() {
         bike.setFrame("铝合金车架");

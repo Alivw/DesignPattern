@@ -6,12 +6,21 @@ package com.awei.demo1;
  * @Create: 2021-08-24 09:03
  **/
 public class Director {
-    private Builder builder;
+    private final AbstractBuilder builder;
 
-    public Director(Builder builder) {
+    /**
+     * 构造方法
+     * @Author: shizuwei 2021/8/24 10:04
+     */
+    public Director(AbstractBuilder builder) {
         this.builder = builder;
     }
 
+   /**
+    * 构造自行车
+    * @return com.awei.demo1.Bike
+    * @Author: shizuwei 2021/8/24 10:03
+    */
     public Bike construct() {
         builder.buildSeat();
         builder.buildFrame();
