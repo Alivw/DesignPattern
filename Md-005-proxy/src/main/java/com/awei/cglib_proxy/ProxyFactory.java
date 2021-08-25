@@ -25,6 +25,7 @@ public class ProxyFactory implements MethodInterceptor {
         enhancer.setSuperclass(TrainStation.class);
         // 设置回调函数    方法所属类的对象
         enhancer.setCallback(this);
+//        enhancer.setCallback(new MyMethodInterCepter());
         // 创建代理对象
         TrainStation proxyObject = (TrainStation) enhancer.create();
         return proxyObject;
