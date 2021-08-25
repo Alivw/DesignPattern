@@ -32,6 +32,6 @@ public class ProxyTest
 
     @Test
     public void cglibProxyTest() {
-        new com.awei.cglib_proxy.ProxyFactory().getProxyObject().sell();
+        System.out.println(new com.awei.cglib_proxy.ProxyFactory().getProxyObject().doSome());
     }
 }
