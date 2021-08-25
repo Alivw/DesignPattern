@@ -1,7 +1,5 @@
 package factory_method;
 
-import javax.swing.plaf.synth.SynthRootPaneUI;
-
 /**
  * @Description:
  * @Author: Awei
