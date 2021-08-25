@@ -23,16 +23,22 @@ public class ProxyFactory {
         SellTickets sellTickets = ((SellTickets) Proxy.newProxyInstance(
                 TrainStation.class.getClassLoader(),
                 TrainStation.class.getInterfaces(),
-                new InvocationHandler() {
-                    @Override
-                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        //System.out.println("Invoke 方法执行了");
-                        // 做增强
-                        System.out.println("代理点JDK勒肥");
-                        // obj 即为代理方法 Sell（） 的返回值
-                        Object obj = method.invoke(station, args);
-                        return obj;
-                    }
+
+//                new InvocationHandler() {
+//                    @Override
+//                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//                        //System.out.println("Invoke 方法执行了");
+//                        // 做增强
+//                        System.out.println("代理点JDK雷肥");
+//                        // obj 即为代理方法 Sell（） 的返回值
+//                        Object obj = method.invoke(station, args);
+//                        return obj;
+//                    }
+//                }
+
+                (Object proxy, Method method, Object[] args)->{
+                    System.out.println("代理(JDK)点雷肥");
+                    return method.invoke(station, args);
                 }
         ));
         return sellTickets;

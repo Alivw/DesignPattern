@@ -17,10 +17,15 @@ import java.lang.reflect.Proxy;
  **/
 public class ProxyFactory implements MethodInterceptor {
 
+    private TrainStation station = new TrainStation();
     public TrainStation getProxyObject() {
+        // 创建 Enhancer 对象，类似于 JDK 代理中的 Proxy 类
         Enhancer enhancer = new Enhancer();
+        // 设置父类的字节码对象 代理对象 继承自目标类
         enhancer.setSuperclass(TrainStation.class);
+        // 设置回调函数    方法所属类的对象
         enhancer.setCallback(this);
+        // 创建代理对象
         TrainStation proxyObject = (TrainStation) enhancer.create();
         return proxyObject;
     }
@@ -29,6 +34,8 @@ public class ProxyFactory implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("cglib动态代理雷肥");
-        return null;
+        Object result = method.invoke(station, objects);
+        return result;
     }
+
 }
