@@ -2,6 +2,7 @@ package com.awei;
 
 import static org.junit.Assert.assertTrue;
 
+import com.awei.jdk_proxy.ProxyFactory;
 import com.awei.static_proxy.ProxyPoint;
 import org.junit.Test;
 
@@ -21,5 +22,16 @@ public class ProxyTest
     public void staticProxyTest() {
         ProxyPoint point = new ProxyPoint();
         point.sell();
+    }
+
+
+    @Test
+    public void jdkProxyTest() {
+        new ProxyFactory().getProxyObject().sell();
+    }
+
+    @Test
+    public void cglibProxyTest() {
+        new com.awei.cglib_proxy.ProxyFactory().getProxyObject().sell();
     }
 }
