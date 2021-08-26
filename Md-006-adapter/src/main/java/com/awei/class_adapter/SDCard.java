@@ -1,4 +1,4 @@
-package com.awei;
+package com.awei.class_adapter;
 
 /**
  * @Description: CDCard Class

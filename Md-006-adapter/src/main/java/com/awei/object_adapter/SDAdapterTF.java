@@ -1,4 +1,4 @@
-package com.awei;
+package com.awei.object_adapter;
 
 /**
  * @version: v1.0
@@ -6,17 +6,22 @@ package com.awei;
  * @Author: shizuwei
  * @Create: 2021-08-25 16:43
  **/
-public class  SDAdapterTF  extends TFCardImpl implements SDCard {
+public class  SDAdapterTF   implements SDCard {
 
+    private TFCard tfCard;
+
+    public SDAdapterTF(TFCard tfCard) {
+        this.tfCard = tfCard;
+    }
     @Override
     public String readCd() {
         System.out.println("reading msg by adapter.....");
-        return readTf();
+        return tfCard.readTf();
     }
 
     @Override
     public void writeCd(String msg) {
         System.out.println("writing msg by adapter.....");
-        writeTf(msg);
+        tfCard.writeTf(msg);
     }
 }

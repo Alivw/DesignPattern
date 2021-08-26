@@ -1,4 +1,4 @@
-package com.awei;
+package com.awei.object_adapter;
 
 /**
  * @version: v1.0
@@ -12,7 +12,7 @@ public class Client {
         System.out.println(cpu.readSD(new SDCardImpl()));
 
         System.out.println("========================");
-        System.out.println(cpu.readSD(new SDAdapterTF()));
+        System.out.println(cpu.readSD(new SDAdapterTF(new TFCardImpl())));
 
     }
 }

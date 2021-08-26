@@ -1,4 +1,4 @@
-package com.awei;
+package com.awei.object_adapter;
 
 /**
  * @Description: TF卡类

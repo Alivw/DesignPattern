@@ -1,4 +1,4 @@
-package com.awei;
+package com.awei.object_adapter;
 
 /**
  * @version: v1.0
@@ -12,7 +12,7 @@ public class Computer {
         return sdCard.readCd();
     }
 
-    public void writeSD(SDCard sdCard,String msg) {
+    public void writeSD(SDCard sdCard, String msg) {
         sdCard.writeCd(msg);
     }
 }
